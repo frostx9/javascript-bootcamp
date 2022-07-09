@@ -1,0 +1,48 @@
+let Number = [1, 2, 3, 4, 5, 6]; // Create Array
+console.log(Number);
+let Number1 = [10, 11, 12, 13, 14, 15];
+console.log(Number1);
+
+console.log(Number.length); //To find Length of the array. Ans will be 6
+
+console.log(Number.length - 1); // To find highest index number in any array
+
+console.log(Number[1]); // Grab value in Array through index Ans will be 2. Array index start from 0
+
+Number[1] = 9; // Array Update in index postion 1 . Ans will be [ 1, 9, 3, 4, 5, 6 ]
+console.log(Number);
+
+Number[Number.length] = 11; // Always add last postion in any unknown length array ... Not Ideal..Use Push insted
+
+Number.pop(); // Reamvoe element from last postion of array. Ans will be [ 1, 9, 3, 4, 5 ]. Removed  6 from last postion
+console.log(Number);
+
+Number.push(10); // Add ellemt from the last postion of array. Ans will be [ 1, 9, 3, 4, 5, 10 ]. Added 10 in last postion
+console.log(Number);
+
+Number.shift();
+console.log(Number); // Remove first element from the array.Ans will be [ 9, 3, 4, 5, 10 ] . Removed 1 from fast postion of Number Array
+
+Number.unshift(1);
+console.log(Number); // Add first element from the array.Ans will be [ 9, 3, 4, 5, 10 ] . Removed 1 from fast postion of Number Array
+
+console.log(Number.concat(Number1)); // Add Toghter in Array...Ans will be  [1,9,3,4,5,6,10,10,11,12,13,14,15]
+
+console.log(Number.includes(1)); // includes return boolean ... True or false
+
+console.log(Number.indexOf(3)); // Return index value of any element of array..Ans will be 2
+
+console.log(Number.indexOf(" ")); // to find any space is presnt or not...if there is not any space or any value its return -1
+
+console.log(Number.reverse()); // Reverse array
+
+console.log(Number.join("-")); // Join Array make into a string
+
+console.log(Number);
+const new1 = Number.slice(0, 2); // Return new array.. Slice also use to create copy of array
+console.log(new1);
+
+// console.log(Number);
+// const new2 = Number.splice(1, 1, 6); // Splice return on delete items in new array
+// console.log(Number);
+// console.log(new2);
