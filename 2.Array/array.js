@@ -39,10 +39,10 @@ console.log(Number.reverse()); // Reverse array
 console.log(Number.join("-")); // Join Array make into a string
 
 console.log(Number);
-const new1 = Number.slice(0, 2); // Return new array.. Slice also use to create copy of array
+const new1 = Number.slice(0, 2); // Return new array.. Slice also use to create copy of array.. 0 is included and 2 is excluded
 console.log(new1);
 
-// console.log(Number);
-// const new2 = Number.splice(1, 1, 6); // Splice return on delete items in new array
-// console.log(Number);
-// console.log(new2);
+console.log(Number);
+const new2 = Number.splice(1, 1); // Splice basically return empty array...but if u delete something , delete item retuen new array
+console.log(Number);
+console.log(new2);

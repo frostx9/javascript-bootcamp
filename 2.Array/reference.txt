@@ -1,0 +1,8 @@
+when we create varaible to store something , we creating value type varaible.
+It means javascript store all of the varaible. Only with premitve data type
+
+But large thing like array, it doest not store all of those value in varaible itself
+it store a reference of the array. reference is a kind of a memory address. It means
+when we create a array with varaible , this varaible store only memory reference(address) , where
+the array is in memory
+
