@@ -26,3 +26,26 @@ function isPurpale(color) {
 }
 
 console.log(isPurpale("Black"))
+
+// IIFE = Immediately Invoked Function Expression
+/**
+ * 
+ *  (function teacer(){
+ *  let name = "Kyle"
+ *  console.log(name)
+ *  }) () // ()..tels that execuated function immeditely after describe....Best work with var 
+ * 
+ */
+
+// Explicit Binding 
+function ask(question){
+  console.log(this.teacher, question);
+}
+function otherClass(){
+  let teacher = {
+    teacher : "Kyle"
+  }
+
+  ask.call(teacher, "why?")
+}
+otherClass()
