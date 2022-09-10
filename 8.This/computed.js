@@ -17,4 +17,7 @@ const addMore = (obj, k, v) => {
   return { ...obj, [k]: v }
 }
 
+// Dont retturn like this - { ...obj, [k]: v } in one line
+//const addMore = (obj, k, v) => { ...obj, [k]: v }..Javascipt will take as function
+//Wrap in to ()... -> ({ ...obj, [k]: v })
 console.log(addMore(team, "Happy", ":)"));
