@@ -1,0 +1,50 @@
+// this - it is a keyword
+// It is refernce of current execuation sope
+// windows is a glbal sope of the browser
+//the calue of 'this' is depend on invocation contect of the function that it's used in
+
+function say() {
+  console.log("Hello");
+}
+
+/* say() - this anonymus function automatically declared in a global scope
+it add as a method in windows sobject / window scope
+*/
+// same go as var keyword
+
+var color = "red"
+
+// color varaible automatically declared in windown object
+// windows.color -> red
+// but let and const not add in window object
+
+const person = {    // person {} ... this is now current execuation scope
+  first: "Tom",
+  last: "Holland",
+  role: "Spiderman",
+  famous() {
+    const { first, last, role } = this // Destructure
+    return `${first} ${last} palyed ${role} role in No Way Home movie`
+  },
+  fullname() {
+    const { first, last, role } = this // Destructure
+    return `${first} ${last}`
+  }
+}
+
+console.log(person.famous()); // Ans - Tom Holland palyed Spiderman role in No Way Home movie
+console.log(person.fullname());
+
+/*
+the value of 'this' is depend on invocation contect of the function that it's used in.
+that mean is the value will change depedning on how the function is actually executed
+
+if  there is something to left of  '.' then there is someting to the right of '.'..then right portion is set
+to the left.....person.fullname()...in here fullname() is set to the person object
+
+but if there is nothing to lft of the '.'...thne right portion set to the global object
+say()...it by default set to the global object
+*/
+
+// ** Arrow function does not work with this keyword in method. It autmatically set to the window object
+
