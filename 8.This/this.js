@@ -48,3 +48,23 @@ say()...it by default set to the global object
 
 // ** Arrow function does not work with this keyword in method. It autmatically set to the window object
 
+//setInterval(func, 1000)
+
+const animal = {
+  name: ["Dog", "Cat", "Tiger", "Lion", "Fox", "Cow"],
+  pick() {
+    const { name } = this
+    const idx = Math.floor(Math.random() * name.length)
+    return name[idx]
+  },
+  start() {
+    // setInterval(function () {    // when we try to use this keyword setInterval() like function ..its automatically delcared to the global object 
+    //   console.log(this.pick());  // TypeError: this.pick is not a function..because its set to the windows objcet. We avoid here using arrow function
+    // }, 1000)
+    setInterval(() => {
+      console.log(this.pick());
+    }, 1000)
+  }
+}
+
+console.log(animal.start());
