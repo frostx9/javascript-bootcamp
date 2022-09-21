@@ -29,3 +29,18 @@ console.log(fitbitData);
 // Add Property
 fitbitData.totalCal = 125; // New Property
 console.log(fitbitData);
+
+
+const person = {
+
+}
+person.name = "Saumya"
+
+/*
+it assigning
+
+const person = {
+name : "Saumya"
+}
+
+*/ 

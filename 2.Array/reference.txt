@@ -6,3 +6,14 @@ it store a reference of the array. reference is a kind of a memory address. It m
 when we create a array with varaible , this varaible store only memory reference(address) , where
 the array is in memory
 
+
+
+const person = []
+
+person.name = "White"
+
+consoel.log(person) -> Ans. [name : "White"]
+
+in here array person convert to object
+
+** Array is a kind of object but not fundamentally
