@@ -1,6 +1,6 @@
 // Css Targert
 
-/* 
+/*
 To target image from id ..We use '#'
 
 <img id="image"
@@ -18,3 +18,28 @@ To target image from class ..We use '.'
 }
 
 */
+
+// Dom - Document Object Model
+//When any web page laods up, brower turn all into bunch of javascript object
+/*
+Document is the entry point of DOM. It contains represntaion of all the content of page
+it is the height point of html page
+          Doucment
+             \
+             Body
+             /\
+            h1 h2
+          /
+        Ul
+ */
+
+// Selecting Process in DOM
+// Selecting Element First, then manupulating the element 
+
+// getElemntById - It takes the matching elemnt id 
+//Target Elemnt by id
+//id must be unique in one every page
+
+document.getElementById("image") // ..in here  <img id="image"..../>
+
+//getElemntByTagName
