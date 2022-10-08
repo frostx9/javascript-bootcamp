@@ -40,6 +40,27 @@ it is the height point of html page
 //Target Elemnt by id
 //id must be unique in one every page
 
-document.getElementById("image") // ..in here  <img id="image"..../>
+document.getElementById("image") // ..in here image is the id..  <img id="image"..../>...return array like collection
 
 //getElemntByTagName
+// It seelct all tag ..like h1, img , p 
+document.getElementsByTagName("img") // in here img is the tag .. <img id="image"..../>
+
+//getElementByClassName
+//It seelct target by class name
+document.getElementsByClassName("sepecial") // .. in here sepecial is the clas name...<li class="sepecial">Third</li>
+
+/*
+if there is multiaple same class name.. and want to choose specfic elelmt
+then first choost the tag , then choose the class
+ */
+const ul = document.getElementsByTagName("ul")[0]
+ul.getElementsByClassName("special")
+
+//querySelector
+document.querySelector("h1") // by tag name..only return first match..not return any array
+document.querySelector("#image")  // by id
+document.querySelector(".sepcial") // by class
+
+//querySelectorAll
+document.querySelectorAll(".sepcial") // it returns all match..not match first one
