@@ -1,0 +1,23 @@
+h1 {
+  color: purple;
+  font-size: 60px;
+}
+
+#image {
+  width: 250px;
+}
+
+.sepecial {
+  color: teal;
+  font-size: 30px;
+
+}
+
+input {
+  height: 50px;
+  width: 100px;
+}
+
+input[type="password"] {
+  border-color: orange;
+}
