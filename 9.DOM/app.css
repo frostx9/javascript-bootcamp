@@ -3,6 +3,11 @@ h1 {
   font-size: 60px;
 }
 
+h1:hover {
+  color: orange;
+  font-size: 80px;
+}
+
 #image {
   width: 250px;
 }
@@ -20,4 +25,15 @@ input {
 
 input[type="password"] {
   border-color: orange;
+}
+
+.todo {
+  font-size: 30px;
+  color: olive;
+}
+
+.done {
+  color: grey;
+  text-decoration: line-through;
+  opacity: 50%;
 }

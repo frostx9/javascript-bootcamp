@@ -50,3 +50,92 @@ h1.innertext += "<b> HEllo </b>" ..it can not understand is is a blod tag...it c
 const input = document.querySelectorAll("input")
 input[0].value
 // Ans - "Hello"
+
+// for extract value from checkedbox we use checked method
+input[1].checked
+// Ans - true
+
+//href
+//it use extracted value from ancahr tag
+const a = document.querySelectorAll("a") // a ..its anchar tag... <a href = " ">
+a.href
+
+//src
+//it use extracted value from iamge src
+const img = document.querySelectorAll("img")
+img.src
+
+
+
+/*--------------------------------------------------------------------- */
+
+//getAttribute    
+//this one help to get value form any king of attribue
+const range = document.querySelector("input[type='range']") // it will select range attribute inside input tage
+range.getAttribute("max") // max attribute in range type attribute
+//ans = 58
+
+// setAttribute
+range.setAttribute("min", '-500') // now min attribute in range type element is -500
+
+
+/*--------------------------------------------------------------------- */
+//parrentElement
+
+const firstLi = document.querySelector("li")
+firstLi.parentElement
+//Ans = <ul>..</ul> ...becacuse li is under the ul
+
+//children
+const firstUl = document.querySelector("ul")
+ul.children
+
+//nextSibling
+firstLi.nextElementSibling
+//Ans -  <li>Second</li>
+
+//previousSibling
+thirdLi.previousElementSibling
+
+/*--------------------------------------------------------------------- */
+
+// Altering Style
+//Manipualte css property using javascipt
+// Not much useful
+
+//style 
+
+const h1New = document.querySelector("h1")
+h1New.style // it will retrun empty string..unless css aplied in inline way ...<h1 style = "color : teal">
+
+h1.style.color = "Orange" // change the color using javascript
+
+/*--------------------------------------------------------------------- */
+//getComputedStyle - 
+
+const liNew = document.querySelector("li")
+const styles = getComputedStyle(liNew)
+
+styles.color
+//Ans - rgb(x, x, x)
+
+
+/*--------------------------------------------------------------------- */
+
+// Manupulating Class at once
+
+// .classlist
+
+
+
+const todo = document.querySelector("#todos todo")
+//class is an attribute
+todo.getAttribute("class")
+
+todo.classList
+// DOMTokenList ['todo', value: 'todo']
+
+todo.classList.add("done") // add new calss into todo class
+todo.classList.remove("done") // remove class form todo class
+
+todo.classList.toggle('done') // combine both add and remove 
