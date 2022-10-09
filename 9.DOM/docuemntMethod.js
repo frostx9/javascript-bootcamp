@@ -139,3 +139,69 @@ todo.classList.add("done") // add new calss into todo class
 todo.classList.remove("done") // remove class form todo class
 
 todo.classList.toggle('done') // combine both add and remove 
+
+
+
+/*--------------------------------------------------------------------- */
+// Create Elemctn throght DOM
+//createElement()
+
+//First Create new element
+const newH2 = document.createElement("h2") // h2...which type of element i want to create 
+newH2.innerText = "I like Dog" // add text into h2 elemment
+newH2.classList.add("special") // add new class to h2 element
+
+// now if we want add this to html ...we need appendChild() 
+//appendChild() 
+// it means add child to the parent
+//It will always add to the end
+
+//Second select where to add new child
+
+const section = document.querySelector("section") // section is the parent here
+section.appendChild(newH2)
+
+//example of different create new element
+const newImg = document.createElement("img")
+newImg.src = ""
+newImg.style.width = "200px" // Add inline css
+
+const newSrc = document.createElement('a')
+newSrc.href = ""
+
+// insrtBefore()
+// customize where i want add new elelemnt
+
+//first select parent 
+const parent = document.querySelector("ul")
+
+//Create new element
+const newEle = document.createElement("li")
+newEle.innerText = "Take the trash from table first"
+
+//second select which child above i want add new elelemt... supose i want add new element above 2nd child element
+// in case of always to add above first child..use querySelectoor
+const firstChild = document.querySelector("li.todo")
+
+//now place the new elelemnt
+parent.insertBefore(newEle, firstChild)
+
+//in case add anywhere in child..add querySelectorAll
+
+const thirdChid = document.querySelectorAll("li.todo")[2] // [2] mean selcting third child
+
+parent.insertBefore(newEle, thirdChid) // add new element above third child
+
+
+// append() prepend()
+//it makes toghter
+
+const firstP = document.querySelector('p')
+
+const i = document.createElement('i')
+i.innerText = 'I am italic'
+
+firstP.append(i, newEle) // add both at the end of first paragraph
+firstP.prepend(i, newEle) // add both at the begin of first paragraph
+
+//insertAdjacentElement() ... later
