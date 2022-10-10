@@ -205,3 +205,5 @@ firstP.append(i, newEle) // add both at the end of first paragraph
 firstP.prepend(i, newEle) // add both at the begin of first paragraph
 
 //insertAdjacentElement() ... later
+
+//Remove Elelemnt
