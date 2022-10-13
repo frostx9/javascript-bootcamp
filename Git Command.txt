@@ -1,8 +1,15 @@
 // To solve git error unrelated histories  
-
 git pull origin main --allow-unrelated-histories
 
 
 // To Get all Branch after clone
-
 git remote -v
+
+// Git Auto Merge
+git commit
+    |
+ ctrl o
+    |
+  Enter
+    |
+ ctrl x
