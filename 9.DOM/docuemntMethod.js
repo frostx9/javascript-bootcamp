@@ -38,7 +38,7 @@ Ans-
 
 innerText cant parst tag..where innerHTNl can parse tag
 
-h1.innerHTMl += "<b> HEllo </b>" ...it ccan understan it is a bold tag
+h1.innerHTMl += "<b> HEllo </b>" ...it ccan understand it is a bold tag
 
 h1.innertext += "<b> HEllo </b>" ..it can not understand is is a blod tag...it converts all text between ""
 */
@@ -47,7 +47,7 @@ h1.innertext += "<b> HEllo </b>" ..it can not understand is is a blod tag...it c
 //value
 
 //it use extracted value from input tage
-const input = document.querySelectorAll("input")
+const input = document.querySelectorAll("input") // it will retrun array of input attribute...NodeList(5) [input, input, input, input, input]
 input[0].value
 // Ans - "Hello"
 
@@ -71,8 +71,9 @@ img.src
 
 //getAttribute    
 //this one help to get value form any king of attribue
-const range = document.querySelector("input[type='range']") // it will select range attribute inside input tage
-range.getAttribute("max") // max attribute in range type attribute
+const range = document.querySelector("input[type='range']") // it will select range attribute inside input tage. We select iput tag whose have type is range
+//We save it in varaible . Then acces multiaple rang attribute from it
+range.getAttribute("max") // max attribute in range type attribute. S
 //ans = 58
 
 // setAttribute
@@ -88,7 +89,8 @@ firstLi.parentElement
 
 //children
 const firstUl = document.querySelector("ul")
-ul.children
+firstUl.children
+//Ans = <li>...</li>
 
 //nextSibling
 firstLi.nextElementSibling
@@ -96,6 +98,31 @@ firstLi.nextElementSibling
 
 //previousSibling
 thirdLi.previousElementSibling
+
+/*--------------------------------------------------------------------- */
+// Channing All Elelemt
+// // Change All Li innerText
+
+const allLi = document.querySelectorAll("li") // Retrun as a array
+for (let i = 0; i < allLi.length; i++) {
+    allLi[i].innerText = "All Li Will Be Change"
+}
+//Different loop
+for (let lis of allLi) {
+    lis.innerText = "All Li Will Be Change"
+}
+
+// Changae All li color
+
+const alliColour = document.querySelectorAll("li")
+const color = ["Orange", "Red", "Black"]
+
+alliColour.forEach((item, index) => {
+    // const color = colors[index]
+    // item.style.color = color
+    item.style.color = color[index]
+});
+
 
 /*--------------------------------------------------------------------- */
 
