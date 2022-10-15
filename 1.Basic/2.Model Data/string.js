@@ -34,3 +34,7 @@ console.log(example.slice(3, 7)); // Ans = 'is i'. 1st number is staring number.
 
 //replace a string
 console.log(example.replace("string", "replacedstring")); // Ans= 'This is the replacedstring'
+
+// Start With String
+const start = "Aloha".startsWith("Al")
+console.log(start);

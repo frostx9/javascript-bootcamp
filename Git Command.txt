@@ -1,10 +1,11 @@
 // To solve git error unrelated histories  
 git pull origin main --allow-unrelated-histories
 
-
+---------------------------------------------------
 // To Get all Branch after clone
 git remote -v
 
+---------------------------------------------------
 // Git Auto Merge
 git commit
     |
@@ -13,3 +14,18 @@ git commit
   Enter
     |
  ctrl x
+
+---------------------------------------------------
+//Remove Remote From Local Git
+git remote rm origin
+
+---------------------------------------------------
+//Remove Git From Local Folder
+rm -rf .git
+
+---------------------------------------------------
+//Rename Remote In Local Git
+git remote rename <old one> <new one>
+
+Example :- git remote rename beanstalk origin
+
