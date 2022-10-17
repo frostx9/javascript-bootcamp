@@ -43,4 +43,8 @@ const person = {
 name : "Saumya"
 }
 
-*/ 
+*/
+
+// Object Freeze
+
+Object.freeze() //This change any object muteable to im-muteable 

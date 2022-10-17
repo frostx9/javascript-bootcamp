@@ -64,3 +64,6 @@ document.querySelector(".sepcial") // by class
 
 //querySelectorAll
 document.querySelectorAll(".sepcial") // it returns all match..not match first one
+
+// To Acess Title Of HTMl page
+document.title
