@@ -44,5 +44,8 @@ console.log(new1);
 
 console.log(Number);
 const new2 = Number.splice(1, 1); // Splice basically return empty array...but if u delete something , delete item retuen new array
+// first argument is starting index number, 2nd arguemnt is How many want item delete after starting index number
+const new3 = Number.splice(5, 0, 16)
+// Here it says that start from index 5 , delete nothing , add 16 after index 5 item .... [10, 11, 12, 13, 14, 15, 16]
 console.log(Number);
 console.log(new2);
