@@ -162,6 +162,7 @@ todo.getAttribute("class")
 todo.classList
 // DOMTokenList ['todo', value: 'todo']
 
+// done form css
 todo.classList.add("done") // add new calss into todo class
 todo.classList.remove("done") // remove class form todo class
 
@@ -176,7 +177,7 @@ todo.classList.toggle('done') // combine both add and remove
 //First Create new element
 const newH2 = document.createElement("h2") // h2...which type of element i want to create 
 newH2.innerText = "I like Dog" // add text into h2 elemment
-newH2.classList.add("special") // add new class to h2 element
+newH2.classList.add("special") // add new class to h2 element ...<h2 class= "special"> </h2>
 
 // now if we want add this to html ...we need appendChild() 
 //appendChild() 
@@ -185,8 +186,15 @@ newH2.classList.add("special") // add new class to h2 element
 
 //Second select where to add new child
 
-const section = document.querySelector("section") // section is the parent here
+const section = document.querySelector("section") // section is a element ...and it is the parent here <section>.... </section>
 section.appendChild(newH2)
+/**
+ * <section>
+ * 
+ * <h2 class = "special"> "I like Dog" </h2>
+ *
+ * </section>
+ */
 
 //example of different create new element
 const newImg = document.createElement("img")
@@ -234,3 +242,10 @@ firstP.prepend(i, newEle) // add both at the begin of first paragraph
 //insertAdjacentElement() ... later
 
 //Remove Elelemnt
+
+// Little Example
+
+const newh11 = document.createElement("h1") // Create New Element h1
+newh11.textContent = "Hello Wolrd" // Add Text into h1 element
+newh11.className = 'header' // Give A class name to h1 element
+document.getElementById("rooy").append("h1") // Add h1 elemt in div which id is root
