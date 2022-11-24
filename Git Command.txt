@@ -29,3 +29,42 @@ git remote rename <old one> <new one>
 
 Example :- git remote rename beanstalk origin
 
+---------------------------------------------------
+
+To abort merge after got conflict
+git merge --abort
+
+---------------------------------------------------
+
+To Remove Commit From Local Git
+
+git reset HEAD~1
+~1 -> mean remove from top commit
+~2 -> mean remove from top 2 commit...and so on
+
+after remove commit delete file
+
+git checkout <file nam>
+
+
+---------------------------------------------------
+
+git checkout master
+
+$ git merge feature
+Auto-merging Document
+CONFLICT (content): Merge conflict in codefile.js
+Automatic merge failed; fix conflicts and then commit the result.
+
+if there is any coflict 
+
+git checkout --ours codefile.js      // To keep Local File
+to select the changes done in master
+
+git checkout --theirs codefile.js   // To keep Their File
+to select the changes done in feature
+
+git add codefile.js
+git merge --continue
+
+
