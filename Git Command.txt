@@ -67,4 +67,15 @@ to select the changes done in feature
 git add codefile.js
 git merge --continue
 
+---------------------------------------------------
 
+
+Host personal github.com
+  Hostname github.com
+  PreferredAuthentications publickey
+  IdentityFile ~/.ssh/id_rsa
+
+Host other github.com
+  Hostname github.com
+  PreferredAuthentications publickey
+  IdentityFile ~/.ssh/id_rsa_other
