@@ -29,3 +29,11 @@ for (const obj of arr2) {
     break;
   }
 }
+
+
+// Promise.all
+
+const [client, user] = await Promise.all([
+  await User.findOne({ _id: project._client }).exec(),
+  await User.findOne({ _id: assigneeId }).exec()
+])
