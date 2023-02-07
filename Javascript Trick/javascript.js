@@ -97,3 +97,29 @@ if (searchText !== undefined) {
     { email: regex },
     { phone: regex }]
 }
+
+//--------------Decode Jeson Web Token------------------------
+/**
+ * npm i jwt-decode
+ *
+ * const jwtDecode = require("jwt-decode")
+ *
+ * const decodeToken = jwtDecode(response)
+ */
+
+
+//--------------URLSearchParams------------------------
+/**
+ * 
+ * const paramObject = {
+        client_id: "1000.AKXZ0VG60GJQXNJ1S88Y4OVCIVMBNE",
+        client_secret: "316ef5bc74f71405fb080ae1883d4d4836e475ba5f",
+        grant_type: "authorization_code",
+        redirect_uri: "https://eoer4i6zvfphqmt.m.pipedream.net",
+        code: `${authCode}`
+      }
+
+      // const urlParam = new URLSearchParams(paramObject)
+      // const response = await axios.post("https://accounts.zoho.in/oauth/v2/auth/token?", urlParam)
+ */
+
