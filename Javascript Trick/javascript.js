@@ -109,17 +109,28 @@ if (searchText !== undefined) {
 
 
 //--------------URLSearchParams------------------------
-/**
- * 
- * const paramObject = {
-        client_id: "1000.AKXZ0VG60GJQXNJ1S88Y4OVCIVMBNE",
-        client_secret: "316ef5bc74f71405fb080ae1883d4d4836e475ba5f",
-        grant_type: "authorization_code",
-        redirect_uri: "https://eoer4i6zvfphqmt.m.pipedream.net",
-        code: `${authCode}`
-      }
 
-      // const urlParam = new URLSearchParams(paramObject)
-      // const response = await axios.post("https://accounts.zoho.in/oauth/v2/auth/token?", urlParam)
- */
+
+const paramObject = {
+  client_id: "1000.AKXZ0VG60GJQXNJ1S88Y4OVCIVMBNE",
+  client_secret: "316ef5bc74f71405fb080ae1883d4d4836e475ba5f",
+  grant_type: "authorization_code",
+  redirect_uri: "https://eoer4i6zvfphqmt.m.pipedream.net",
+  code: `${authCode}`
+}
+
+const urlParam = new URLSearchParams(paramObject)
+const response = await axios.post("https://accounts.zoho.in/oauth/v2/auth/token?", urlParam)
+
+
+//--------------at()------------------------
+
+//To know value in arr at any index postion
+const arr = [1, 2, 4, 5, 6]
+
+const postion = arr.at(2) // Ans - 4
+
+// To Konw lost value in arr.No need to write <arr.length-1>
+const postion1 = arr.at(-1)  // Ans - 6
+
 
