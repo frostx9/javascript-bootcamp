@@ -134,3 +134,24 @@ const postion = arr.at(2) // Ans - 4
 const postion1 = arr.at(-1)  // Ans - 6
 
 
+
+//--------------Unique Array of Duplicate Object------------------------
+
+
+const books = [
+
+  { title: "C++", author: "Bjarne" },
+  { title: "Java", author: "James" },
+  { title: "Python", author: "Guido" },
+  { title: "Java", author: "James" }
+
+]
+
+
+const jsonObject = books.map(JSON.stringify);
+
+let uniqueSet = new Set(jsonObject);
+uniqueArray = Array.from(uniqueSet).map(JSON.parse);
+
+console.log(uniqueArray);
+
