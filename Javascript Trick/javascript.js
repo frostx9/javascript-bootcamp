@@ -155,3 +155,10 @@ uniqueArray = Array.from(uniqueSet).map(JSON.parse);
 
 console.log(uniqueArray);
 
+
+
+//--------------Create Unique Array------------------------
+const arr1 = [1, 2, 4, 4, 5, 6, 7, 7, 8, 9, 9]
+
+const uniqueArr = new Set(arr1)
+console.log(uniqueArr)
