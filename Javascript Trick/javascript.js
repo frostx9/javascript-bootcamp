@@ -151,7 +151,7 @@ const books = [
 const jsonObject = books.map(JSON.stringify);
 
 let uniqueSet = new Set(jsonObject);
-uniqueArray = Array.from(uniqueSet).map(JSON.parse);
+let uniqueArray = Array.from(uniqueSet).map(JSON.parse);
 
 console.log(uniqueArray);
 
@@ -162,3 +162,22 @@ const arr1 = [1, 2, 4, 4, 5, 6, 7, 7, 8, 9, 9]
 
 const uniqueArr = new Set(arr1)
 console.log(uniqueArr)
+
+
+//--------------Match Two Array is Same or Not------------------------
+/**
+ * task._assignee = []
+ * assignee = []
+ */
+JSON.stringify(task._assignee) !== JSON.stringify(assignee)
+
+
+//--------------Match Two Array and Find Unqiue Value------------------------
+const array1 = ['12', '1', '10', '19', '100'];
+const array2 = ['12', '10', '19'];
+
+const array3 = array1.filter((obj) => {
+  return array2.indexOf(obj) === -1
+})
+
+console.log(array3);
