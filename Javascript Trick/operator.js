@@ -70,3 +70,21 @@ console.log(ternary);
 
 const nullish = Drive.Starting ?? 500   // Left Side Check it is value null or undefined. Strict Check
 console.log(nullish);
+
+
+
+//----------------------- Logical OR assignment (||=) -----------------------
+
+const a = { duration: 50, title: '' };
+
+a.duration ||= 10;
+console.log(a.duration);
+// Expected output: 50
+
+a.title ||= 'title is empty.';
+console.log(a.title);
+// Expected output: "title is empty"
+
+/**
+ * Explain if there is empty string we can put default value
+ */
