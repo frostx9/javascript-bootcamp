@@ -181,3 +181,30 @@ const array3 = array1.filter((obj) => {
 })
 
 console.log(array3);
+
+
+
+//--------------Deep Copy------------------------
+
+const calenderEvent = {
+  title: "Builder",
+  date: new Date(),
+  arr: ["A", "B"]
+}
+
+// Shallow Copy 
+
+const shallowCopy = { ...calenderEvent }
+
+console.log(calenderEvent === shallowCopy);  // False
+
+console.log(calenderEvent.arr === shallowCopy.arr) // True ..Because it did not copy , it just make a reference of the array. if any 
+// Change in  calenderEvent array , it will also affect shallowCopy array
+
+
+// Deep Clone Copy
+
+const structuredCopy = structuredClone(calenderEvent)
+console.log(structuredCopy);
+
+console.log(calenderEvent.arr === structuredCopy.arr) // Now It is false
