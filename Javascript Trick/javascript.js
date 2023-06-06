@@ -182,4 +182,13 @@ const array3 = array1.filter((obj) => {
 
 console.log(array3);
 
+//-------------- To Check if a Key Exists in an Object------------------------
 
+const user1 = {
+  name: "ABC",
+  country: "India"
+
+}
+
+const hasKey = user1.hasOwnProperty("name")
+console.log(hasKey) // True
