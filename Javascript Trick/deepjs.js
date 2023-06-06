@@ -50,3 +50,36 @@ const makeCount = () => {
     return count++
   }
 }
+
+
+
+//-------------- Bind ------------------------
+
+//Connected A function with Object
+const user1 = {
+  firstName: "Kristine",
+  lastName: "Hudgens"
+}
+
+const user2 = {
+  firstName: "Kristine",
+  lastName: "Hudgens"
+}
+
+const fullNameBypss = function (firstName, lastName) {
+  return `${firstName} ${lastName}`
+}
+
+const krisDataBypass = fullNameBypss(user1.firstName, user1.lastName)
+console.log(krisDataBypass);
+
+
+// We can By Pass all the above extra code with bind Keyword
+
+
+const fullName = function () {
+  return `${this.firstName} ${this.lastName}`
+}
+
+const krisData = fullName.bind(user1)  // Made Together fullName function with user1 object data and 
+console.log(krisData());
