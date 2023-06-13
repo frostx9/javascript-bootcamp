@@ -46,11 +46,18 @@ it is the height point of html page
 //Target Elemnt by id
 //id must be unique in one every page
 
-document.getElementById("image") // ..in here image is the id..  <img id="image"..../>...return array like collection
+document.getElementById("image") // ..in here image is the id..  <img id="image"..../>
+
+
 
 //getElemntByTagName
 // It seelct all tag ..like h1, img , p 
 document.getElementsByTagName("img") // in here img is the tag .. <img id="image"..../>
+
+/**
+ * HTMLCollection - It is a array like Object
+ * we can use some array method in this collection.
+ */
 
 //getElementByClassName
 //It seelct target by class name
