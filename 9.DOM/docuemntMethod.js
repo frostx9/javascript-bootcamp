@@ -53,21 +53,21 @@ h1.innertext += "<b> HEllo </b>" ..it can not understand is is a blod tag...it c
 */
 
 /*--------------------------------------------------------------------- */
-//value
 
-//it use extracted value from input tage
+//value --> it use extracted value from input tage
 const input = document.querySelectorAll("input") // it will retrun array of input attribute...NodeList(5) [input, input, input, input, input]
 input[0].value
 // Ans - "Hello"
 
 // for extract value from checkedbox we use checked method
-input[1].checked
+input[1].checked  // For Checkbox 
 // Ans - true
 
-//href
-//it use extracted value from ancahr tag
+
+//href -- it use extracted value from ancahr tag. Web Site URL
 const a = document.querySelectorAll("a") // a ..its anchar tag... <a href = " ">
 a.href
+
 
 //src
 //it use extracted value from iamge src
