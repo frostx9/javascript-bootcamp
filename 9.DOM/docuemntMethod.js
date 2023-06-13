@@ -1,24 +1,33 @@
 // innerText
+
 const h1 = document.querySelector("h1") // h1 is tag 
 h1.innerText // Ans -  My WebPage
+
+// To Update 
+h1.innerText = "i 'm Hungry"
+
 /* innerText returns all text between seelcted tag by querySelector*/
 
 //textContent
 //same as innerHtml
+
+h1.textContent //  Ans -  My WebPage
+
+// To Update 
+h1.textContent = "i 'm Hungry"
+
 /*
-innerText = This only show pure text in body or beween tag.
+innerText = This only show pure text in body or beween tag. It also chk that what is shown on the page
 
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum doloribus
 accusamus, eum tempora itaque cum sunt repellat libero quibusdam, ad earum
 error corporis amet reiciendis! Accusantium nobis nesciunt esse rerum?'
 
-textContent = It converts everyting into text and show..and also dont change foramt of the html style
+textContent = It converts everyting into text and show.. Dont change foramt of the html style
 
 Laborum
     doloribus accusamus, eum tempora itaque cum sunt
     repellat libero quibusdam, ad earum error corporis amet reiciendis! Accusantium nobis nesciunt esse rerum?
-
-
 */
 
 /*--------------------------------------------------------------------- */
@@ -36,9 +45,9 @@ Ans-
 "
 .. It retruns all tags alongside with text
 
-innerText cant parst tag..where innerHTNl can parse tag
+innerText cant parse tag, mean what is the tag..where innerHTNl can parse tag
 
-h1.innerHTMl += "<b> HEllo </b>" ...it ccan understand it is a bold tag
+h1.innerHTMl += "<b> HEllo </b>" ...it can understand it is a bold tag. It will show in bold format on website
 
 h1.innertext += "<b> HEllo </b>" ..it can not understand is is a blod tag...it converts all text between ""
 */

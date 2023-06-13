@@ -57,7 +57,7 @@ document.getElementsByTagName("img") // in here img is the tag .. <img id="image
 /**
  * HTMLCollection - It is a array like Object
  * we can use some array method in this collection.
- */
+*/
 
 //getElementByClassName
 //It seelct target by class name
@@ -70,10 +70,13 @@ then first choost the tag , then choose the class
 const ul = document.getElementsByTagName("ul")[0]
 ul.getElementsByClassName("special")
 
-//querySelector
+
+
+//querySelector  ---> Combination of getElementById, getElementsByTagName, getElementsByClassName
+
 document.querySelector("h1") // by tag name..only return first match..not return any array
-document.querySelector("#image")  // by id
-document.querySelector(".sepcial") // by class
+document.querySelector("#image")  // by id ..only return first match
+document.querySelector(".sepcial") // by class ..only return first match
 
 //querySelectorAll
 document.querySelectorAll(".sepcial") // it returns all match..not match first one
