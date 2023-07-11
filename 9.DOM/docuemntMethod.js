@@ -80,9 +80,9 @@ img.src
 
 //getAttribute    
 //this one help to get value form any king of attribue
-const range = document.querySelector("input[type='range']") // it will select range attribute inside input tage. We select iput tag whose have type is range
+const range = document.querySelector("input[type='range']") // it will select range attribute inside input tag. We select input tag who  have type is range
 //We save it in varaible . Then acces multiaple rang attribute from it
-range.getAttribute("max") // max attribute in range type attribute. S
+range.getAttribute("max") // max attribute in range type attribute. 
 //ans = 58
 
 // setAttribute
@@ -90,9 +90,9 @@ range.setAttribute("min", '-500') // now min attribute in range type element is 
 
 
 /*--------------------------------------------------------------------- */
-//parrentElement
 
-const firstLi = document.querySelector("li")
+//parrentElement
+const firstLi = document.querySelector("li") // It Will Seelct first li in page
 firstLi.parentElement
 //Ans = <ul>..</ul> ...becacuse li is under the ul
 

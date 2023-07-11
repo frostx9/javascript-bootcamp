@@ -192,3 +192,17 @@ const user1 = {
 
 const hasKey = user1.hasOwnProperty("name")
 console.log(hasKey) // True
+
+
+
+// --------------Get the index of the object inside an array------------------------
+
+const a = [
+  { prop1: "abc", prop2: "qwe" },
+  { prop1: "bnmb", prop2: "yutu" },
+  { prop1: "zxvz", prop2: "qwrq" }
+];
+
+const index = a.findIndex(x => x.prop2 === "yutu");
+
+console.log(index)
