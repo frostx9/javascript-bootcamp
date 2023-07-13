@@ -206,3 +206,14 @@ const a = [
 const index = a.findIndex(x => x.prop2 === "yutu");
 
 console.log(index)
+
+
+
+
+const matchAray = []
+
+accountyArry.forEach((el) => {
+  if (inQueyArry.includes(el)) {
+    matchAray.push(el)
+  }
+})
