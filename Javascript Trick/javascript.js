@@ -208,7 +208,7 @@ const index = a.findIndex(x => x.prop2 === "yutu");
 console.log(index)
 
 
-
+// --------------Get Matching Element And Push into a array------------------------
 
 const matchAray = []
 
