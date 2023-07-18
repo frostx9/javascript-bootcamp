@@ -219,7 +219,7 @@ accountyArry.forEach((el) => {
 })
 
 
-
+// --------------To Get Unique Objet based on key from a array------------------------
 const duplicateArray = [
   {
     name: 'John',
