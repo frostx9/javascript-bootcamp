@@ -247,3 +247,15 @@ const unique = arr.filter(
    ]
  */
 console.log(unique);
+
+
+const oriarr = [{ id: '124', name: 'qqq' },
+{ id: '589', name: 'www' },
+{ id: '45', name: 'eee' },
+{ id: '567', name: 'rrr' }]
+
+const anotherarr = [{ id: '124', name: 'ttt' },
+{ id: '45', name: 'yyy' }]
+
+
+const repalcearr = arr1.map(obj => arr2.find(o => o.id === obj.id) || obj)
