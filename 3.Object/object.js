@@ -3,7 +3,7 @@
 // All keys are converted to string
 // {...}  - this is object litterals
 
-// Creating Object
+// Creating Object - Object Litteral
 
 const fitbitData = {
   totalSteps: 8456,
@@ -48,3 +48,39 @@ name : "Saumya"
 // Object Freeze
 
 Object.freeze() //This change any object muteable to im-muteable 
+
+// Object With Symbol
+
+const mySym = Symbol("key1")
+
+const symObj = {
+  [mySym]: "myKey1"
+}
+
+console.log(symObj[mySym]);
+
+
+// Object Create - singleton
+const myNewObj = new Object()
+
+// Combine Multipale Object
+const obj1 = { 1: "a", 2: "b" }
+const obj2 = { 3: "c", 4: "d" }
+
+const obj3 = Object.assign({}, obj1, obj2) // Ans = { '1': 'a', '2': 'b', '3': 'c', '4': 'd' }
+
+/**
+ * Object.assign(target, Source)
+ * {} => marge all source to this target
+ */
+
+
+// Anothe Way  With Spread Operator
+const obj4 = { ...obj1, ...obj2 }
+
+console.log(Object.keys(obj1));
+console.log(Object.values(obj1));
+console.log(Object.entries(obj1));
+
+console.log(obj1.hasOwnProperty("1")) // true
+console.log(obj1.hasOwnProperty("4")) // false
