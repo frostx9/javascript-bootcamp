@@ -49,3 +49,23 @@ const new3 = Number.splice(5, 0, 16)
 // Here it says that start from index 5 , delete nothing , add 16 after index 5 item .... [10, 11, 12, 13, 14, 15, 16]
 console.log(Number);
 console.log(new2);
+
+// Slice Dont manuplualte Original Array, but Splide Manipualte Orignal Array
+
+// Another Method For Concat Using Spread Operator
+console.log([...Number, ...Number1])
+
+// Array Flat
+const anotherArray = [1, 2, [3, 4, [5, 6]], 7]
+console.log(anotherArray.flat(Infinity)) // Infinity mean most deap part of the array
+
+// To Check Array or not
+console.log(Array.isArray(anotherArray));
+
+// Create Array Set Of Elements
+let score1 = 100
+let score2 = 200
+let score3 = 300
+
+console.log(Array.of(score1, score2, score3));
+
