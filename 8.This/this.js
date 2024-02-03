@@ -1,7 +1,7 @@
 // this - it is a keyword
 // It is refernce of current execuation sope
 // windows is a glbal sope of the browser
-//the calue of 'this' is depend on invocation contect of the function that it's used in
+//the value of 'this' is depend on invocation contect of the function that it's used in
 
 function say() {
   console.log("Hello");
@@ -27,7 +27,7 @@ const person = {    // person {} ... this is now current execuation scope
     return `${first} ${last} palyed ${role} role in No Way Home movie`
   },
   fullname() {
-    const { first, last, role } = this // Destructure
+    const { first, last, } = this // Destructure
     return `${first} ${last}`
   }
 }
