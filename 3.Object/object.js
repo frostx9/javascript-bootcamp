@@ -84,3 +84,13 @@ console.log(Object.entries(obj1));
 
 console.log(obj1.hasOwnProperty("1")) // true
 console.log(obj1.hasOwnProperty("4")) // false
+
+// Object Destructure
+
+const obj5 = {
+  fullName: "Apex Legend"
+}
+
+const { fullName: name } = obj5  // We Can give also name of the property
+
+console.log(name) // Apex Legend
