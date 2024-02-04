@@ -7,7 +7,7 @@ const leftToRight = " !-> && -> !!";
 
 const day = 2;
 
-switch (day) {
+switch (day) {   // Number
   case 1:
     console.log("Monday");
     break;
@@ -16,6 +16,23 @@ switch (day) {
     break;
   case 3:
     console.log("Thursday");
+    break;
+  default:
+    console.log("Default match");
+}
+
+switch (day) {   // String
+  case "mon":
+    console.log("Monday");
+    break;
+  case "tue":
+    console.log("Tuesday");
+    break;
+  case "thu":
+    console.log("Thursday");
+    break;
+  default:
+    console.log("Default match");
 }
 
 // Ternary Operator
@@ -26,3 +43,26 @@ num === 7 ? console.log("Lucky") : console.log("Bad");
 
 const chat = "offline";
 chat === "offline" ? console.log("red") : console.log("Green");
+
+// Truthy And Falsy Value
+
+const value = "abc@gmail.com"
+
+if (value) {  // We Asume value is truthy /  Have Value
+  console.log(value);
+} else {
+  console.log("Mo Value");
+}
+
+/**
+ * Falsey Value = 0, -0, "", null, undefined, null, BigInt 0n
+ * 
+ * Truthy Value = [], {}, functio() / Empty Fucntion, 
+ */
+
+// Empty Object Check
+const emptyObj = {}
+
+if (Object.keys(emptyObj).length === 0) {
+  console.log("Empty Object");
+}
