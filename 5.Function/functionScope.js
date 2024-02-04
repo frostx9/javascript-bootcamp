@@ -8,10 +8,10 @@ function getMyName() {
 getMyName()
 
 // Nested Function
-function outer(){
+function outer() {
   let hero = "Black Pamther"
 
-  function inner(){
+  function inner() {
     let help = `${hero}, Hello`
     console.log(help);
   }
@@ -23,48 +23,48 @@ console.dir() //
 
 // In Javascript Function are object
 
-const add = function(x,y){
-  return x+y
+const add = function (x, y) {
+  return x + y
 }
 
-const sub = function(x,y){
-  return x-y
+const sub = function (x, y) {
+  return x - y
 }
 
 // In here we store the function name array and later use it 
-const arr = [add,sub]
+const arr = [add, sub]
 
-for(let func of arr){
-  let result = func(20,8)
+for (let func of arr) {
+  let result = func(20, 8)
   console.log(result);
 }
 
 // Strore In Object.. This is example creating method. Like = .toUpperCase(). In here .Addition()
 
-const math = {  
-  Addition : add,
-  Subtraction : sub
+const math = {
+  Addition: add,
+  Subtraction: sub
 }
 
-console.log(math.Addition(10,2))
-console.log(math.Subtraction(10,2))
+console.log(math.Addition(10, 2))
+console.log(math.Subtraction(10, 2))
 
 // Higher Order Function = Its mean Accept other fuction as an argument or return as a function
 //Accept other fuction as an argument
-function call(calll){
+function call(calll) {
   calll() // call the luagh() function twice... in here call() meaning calling laugh() function
   calll()
 }
 
-function laugh(){
+function laugh() {
   console.log("Haha...You are Funny");
 }
 
 call(laugh)
 
 //Return as a function
-function multi(num){
-  return function(x){
+function multi(num) {
+  return function (x) {
     return num * x
   }
 }
@@ -74,15 +74,15 @@ console.log(triple(2)); // This call meaning function (x) { return 5 * 2}
 
 // Example :-
 
-function makeBetween (a,b){
-  return function (age){
+function makeBetween(a, b) {
+  return function (age) {
     if (age > a && age < b) return true
     return false
-    
+
   }
 }
 
-const isChild = makeBetween(0,18)
+const isChild = makeBetween(0, 18)
 console.log(isChild(15));
 
 // Callback
@@ -95,8 +95,14 @@ console.log(animal); // Result Dog
 
 console.log(newAnimal);
 var newAnimal = "Dog" // Result Undefined
+
+var animal
+console.log(animal)
+animal = "Dog"
+
 /*
 so it means when javascipt see var keyword , it will run first..put ont the top. So var animal will run fast, then it will be assigned with value
+var also declared in global scope
 
 var animal
 console.log(animal)

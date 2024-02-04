@@ -27,25 +27,49 @@ function isPurpale(color) {
 
 console.log(isPurpale("Black"))
 
-// IIFE = Immediately Invoked Function Expression
-/**
- * 
- *  (function teacer(){
- *  let name = "Kyle"
- *  console.log(name)
- *  }) () // ()..tels that execuated function immeditely after describe....Best work with var 
- * 
- */
+  // IIFE = Immediately Invoked Function Expression
+  /**
+   *  To Prevent Global Scope Varaiable Polution
+   * ; -> To End IFFE function
+   */
+  (function iffEfunc() {  // Named IFFE Function
+    console.log("Hello World");
+  })();
+
+((name) => {  // IFFE Function
+  console.log(`Hello ${name}`);
+})('FROST');
+
+
+
+
 
 // Explicit Binding 
-function ask(question){
+function ask(question) {
   console.log(this.teacher, question);
 }
-function otherClass(){
+function otherClass() {
   let teacher = {
-    teacher : "Kyle"
+    teacher: "Kyle"
   }
 
   ask.call(teacher, "why?")
 }
+
 otherClass()
+
+//     otherClass                 ()
+// Function Refernece     Function Execuation
+
+// Fucntion With Rest Operator
+
+function calculate(...num) {
+  return num
+}
+
+calculate(100, 200, 300) // Ans [100, 200, 300]
+
+
+// Arrow Function - Implicit Retrun Object
+const arrowFunc = () => { { username: "Hello" } }
+console.log(arrowFunc);

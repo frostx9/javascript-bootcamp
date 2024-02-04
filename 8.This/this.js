@@ -14,7 +14,7 @@ it add as a method in windows sobject / window scope
 
 var color = "red"
 
-// color varaible automatically declared in windown object
+// color varaible automatically declared in window object
 // windows.color -> red
 // but let and const not add in window object
 
