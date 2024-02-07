@@ -15,3 +15,5 @@ while (target !== guess) {
 }
 
 console.log(`Target: ${target}, Guess: ${guess}`);
+
+// Do While
