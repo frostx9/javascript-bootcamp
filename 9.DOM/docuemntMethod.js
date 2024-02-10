@@ -9,7 +9,6 @@ h1.innerText = "i 'm Hungry"
 /* innerText returns all text between seelcted tag by querySelector*/
 
 //textContent
-//same as innerHtml
 
 h1.textContent //  Ans -  My WebPage
 
@@ -17,17 +16,13 @@ h1.textContent //  Ans -  My WebPage
 h1.textContent = "i 'm Hungry"
 
 /*
-innerText = This only show pure text in body or beween tag. It also chk that what is shown on the page
+innerText = This only show pure text in body what is shown on the page
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum doloribus
-accusamus, eum tempora itaque cum sunt repellat libero quibusdam, ad earum
-error corporis amet reiciendis! Accusantium nobis nesciunt esse rerum?'
+<h1 id="title" class="heading"> Dom Learning <span> with Javascript</span></h1> => it will show only Dom Learning
 
-textContent = It converts everyting into text and show.. Dont change foramt of the html style
+textContent = It converts everyting into text and show.
 
-Laborum
-    doloribus accusamus, eum tempora itaque cum sunt
-    repellat libero quibusdam, ad earum error corporis amet reiciendis! Accusantium nobis nesciunt esse rerum?
+<h1 id="title" class="heading"> Dom Learning <span> with Javascript</span></h1> => it will show Dom Learning with Javascript
 */
 
 /*--------------------------------------------------------------------- */

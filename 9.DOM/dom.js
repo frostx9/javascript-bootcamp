@@ -1,3 +1,5 @@
+// Dom - Document Object Model
+
 // Css Targert ----
 
 /*
@@ -23,7 +25,6 @@ To target image from class ..We use '.'
 
 */
 
-// Dom - Document Object Model
 //When any web page laods up, brower turn all into bunch of javascript object
 
 /*
@@ -47,7 +48,6 @@ it is the height point of html page
 //id must be unique in one every page
 
 document.getElementById("image") // ..in here image is the id..  <img id="image"..../>
-
 
 
 //getElemntByTagName
