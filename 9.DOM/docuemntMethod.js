@@ -38,7 +38,7 @@ Ans-
     <li>Second</li>
     <li class="sepecial">Third</li>
 "
-.. It retruns all tags alongside with text
+It retruns all tags alongside with text
 
 innerText cant parse tag, mean what is the tag..where innerHTNl can parse tag
 
@@ -105,9 +105,8 @@ thirdLi.previousElementSibling
 
 /*--------------------------------------------------------------------- */
 // Channing All Elelemt
-// // Change All Li innerText
-
-const allLi = document.querySelectorAll("li") // Retrun as a array
+// Change All Li innerText
+const allLi = document.querySelectorAll("li") // Retrun as a NodeList. Look Like Array. But Not actal array.
 for (let i = 0; i < allLi.length; i++) {
     allLi[i].innerText = "All Li Will Be Change"
 }
@@ -253,3 +252,13 @@ const newh11 = document.createElement("h1") // Create New Element h1
 newh11.textContent = "Hello Wolrd" // Add Text into h1 element
 newh11.className = 'header' // Give A class name to h1 element
 document.getElementById("rooy").append("h1") // Add h1 elemt in div which id is root
+
+/**
+ * Differnece Between NodeList and HtmlCollection
+ * 
+ * document.querySelectorAll - Will Return Ndelist. We can use some array method
+ * 
+ * document.getElementsByClassName - Will Return HtmlCollection. We cant use any array method.
+ * To do that we convert this to array with help of Array.from()
+ * 
+ */

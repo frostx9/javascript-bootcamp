@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Dom Learning</title>
+</head>
+
+<style>
+  .class-black {
+    background-color: #212121;
+    color: #fff
+  }
+</style>
+
+
+<body class="class-black">
+
+  <div class="parent">
+    <div class="day">Monday</div>
+    <div class="day">Tuesday</div>
+    <div class="day">Wednesday</div>
+    <div class="day">Thursday</div>
+    <div class="day">Friday</div>
+  </div>
+
+</body>
+
+<script>
+  const mainDiv = document.querySelector(".parent")
+  console.log(mainDiv)
+  console.log(mainDiv.children) // Access Parent Div Choldren
+  console.log(mainDiv.children[1].innerHTML)
+
+  mainDiv.children[1].style.color = "orange" // Changing Style
+
+  console.log(mainDiv.firstElementChild) // It Gives First Child Name - Monday
+
+  console.log(mainDiv.lastElementChild) // It Gives First Child Name - Friday
+
+  const dayOne = document.querySelector(".day")
+  console.log(dayOne)
+  console.log(dayOne.parentElement) // To Track Parent Element 
+  console.log(dayOne.nextElementSibling) // To Go next sibling elelent of dayOne
+
+  console.log("NODES", mainDiv.childNodes); // Nodelsit 11, because Browser count next line as Node
+</script>
+
+</html>
