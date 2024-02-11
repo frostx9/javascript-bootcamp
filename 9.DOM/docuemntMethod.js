@@ -1,6 +1,6 @@
-// innerText
+//---------------------------innerText---------------------------
 
-const h1 = document.querySelector("h1") // h1 is tag 
+const h1 = document.querySelector("h1") // h1 is tag  Selected
 h1.innerText // Ans -  My WebPage
 
 // To Update 
@@ -25,8 +25,8 @@ textContent = It converts everyting into text and show.
 <h1 id="title" class="heading"> Dom Learning <span> with Javascript</span></h1> => it will show Dom Learning with Javascript
 */
 
-/*--------------------------------------------------------------------- */
-// innerHtml
+
+/*---------------------------------innerHtml------------------------------------ */
 
 // It not only retrun text ..it alaso retrun tag alongside with text
 

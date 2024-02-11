@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Dom Learning</title>
+</head>
+
+<style>
+  .class-black {
+    background-color: #212121;
+    color: #fff
+  }
+</style>
+
+<body class="class-black">
+
+  <ul class="language">
+    <li>Javascript</li>
+  </ul>
+
+</body>
+
+<script>
+
+  // Add Element
+  // More Tree Travaerse
+  function addLanguage(lang) {
+    const newLi = document.createElement("li") // Create New Element
+    newLi.innerHTML = `${lang}` // Set innerHtml
+    document.querySelector(".language").appendChild(newLi) // Append The new Li Child
+  }
+
+  addLanguage("Python") // Calling The Function
+
+  // More Optimzation - No Tree Traverse
+  function optiAddLanguage(lang) {
+    const newLi = document.createElement("li") // Create New Element
+    newLi.appendChild(document.createTextNode(lang))
+    document.querySelector(".language").appendChild(newLi)
+  }
+
+  optiAddLanguage("Type Script")
+
+  // Edit Element
+  const secondLi = document.querySelector("li:nth-child(2)")
+  const newLi = document.createElement("li")
+  newLi.textContent = "Mojo"
+  secondLi.replaceWith(newLi) // Selected Li Repalce With New li
+
+  // Remove Element
+  const lastLi = document.querySelector("li:last-child")
+  lastLi.remove() // Rmove The Element
+
+</script>
+
+</html>
