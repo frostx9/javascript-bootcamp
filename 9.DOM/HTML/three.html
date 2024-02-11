@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Dom Learning</title>
+</head>
+
+<style>
+  .class-black {
+    background-color: #212121;
+    color: #fff
+  }
+</style>
+
+
+<body class="class-black">
+
+</body>
+
+<script>
+  const mainDiv = document.createElement('div')  // Dynamically Create Div Element
+  console.log(mainDiv);
+
+  mainDiv.className = "parent"  // Set Class Name
+  mainDiv.id = "parent-id" // Set Id Name
+
+  mainDiv.setAttribute("title", "dynamically genrated ")  // Set Any type Attribute. In Here We set Title. This one diiferent from other. Others select first then overwrite
+  // But setAttribute() directly set. So one round less. Memory Optimaization
+
+  mainDiv.style.backgroundColor = "orange"
+  mainDiv.style.padding = "12px"
+
+  // mainDiv.innerText = "Dom Manupuation"
+
+  const addText = document.createTextNode("Dom Manupuation") // Another Option For  mainDiv.innerText = "Dom Manupuation"
+  mainDiv.appendChild(addText)
+
+  document.body.appendChild(mainDiv) // To Set Element in Body
+
+</script>
+
+</html>
