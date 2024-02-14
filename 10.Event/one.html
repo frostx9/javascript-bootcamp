@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>htnml Events </title>
+</head>
+
+<body style="background-color: #414141; color: aliceblue;">
+  <h2>Amazing image</h2>
+  <div>
+    <ul id="images">
+      <li><img width="200px" id="photoshop"
+          src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+          alt="photoshop"></li>
+      <li><img width="200px" id="japan"
+          src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+          alt=""></li>
+      <li><img width="200px" id="river"
+          src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+          alt=""></li>
+      <li><img width="200px" id="owl"
+          src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+          alt=""></li>
+      <li><img width="200px" id="prayer"
+          src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+          alt=""></li>
+      <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+    </ul>
+  </div>
+</body>
+<script>
+  // .onClick give less feature than eventListner
+
+  // addEventListener
+  // attachEvent() - For Internet Explorer (Early Stage)
+  //jQuery - onEventListner
+
+
+  // Study - type, timestamp, defaultPrevented, target, toElement, srcElement, currentTarget, clientX, clientY, screenX, screenY
+  //altkey, ctrlKey, shiftKEy, keyCode
+
+  // Event Propogation - 1. Event Bubbling, 2. Event Captureing
+
+  /*
+  addEventListener("click", func(), false) => Third Parameter default value is false
+  Mostly Project use is Event Bubbling (Default Value) which is false
+  */
+
+  // First Example -  1. Event Bubbling
+  document.getElementById("images").addEventListener("click", function (e) {
+    console.log("Clicked In Ul");
+  }, false)
+
+  document.getElementById("owl").addEventListener("click", function (e) {
+    console.log("Clicked In Owl");
+  }, false)
+
+  // /*
+  // In this Example if we click any pciture except owl, it will prcint Clicked In Ul. But if we click in Owl picture. It will first print Clicked In Owl
+  // than Clicked In Ul. This Concept is called event bubbling. Small to Big. First Li Part Print the Ul Part Print.
+  // */
+
+
+  // Second Example -  2. Event Captureing
+  document.getElementById("images").addEventListener("click", function (e) {
+    console.log("Clicked In Ul");
+  }, true)
+
+  document.getElementById("owl").addEventListener("click", function (e) {
+    console.log("Clicked In Owl");
+  }, true)
+
+  /*
+  In this Example if we click any pciture except owl, it will prcint Clicked In Ul. But if we click in Owl picture. This Time it will print first Clicked In Ul
+  than Clicked In Owl. Step By Step
+  */
+
+
+  // Another Metohd Of Stop Bubbling - stopPropagation()
+  document.getElementById("images").addEventListener("click", function (e) {
+    console.log("Clicked In Ul");
+  }, false)
+
+  document.getElementById("owl").addEventListener("click", function (e) {
+    console.log("Clicked In Owl");
+    e.stopPropagation()
+  }, false)
+
+  // To Stop Default Behaviour
+  document.getElementById("google").addEventListener
+    ("click", (e) => {
+      e.preventDefault() // To Stop Open Google Link
+      e.stopPropagation()
+    }, false)
+
+  // Mini Project - Delete Picture
+  document.querySelector("#images").addEventListener
+    ("click", (e) => {
+      console.log(e.target.parentNode)
+      console.log(e.target.tagName)
+
+      if (e.target.tagName === "IMG") {
+        let removePic = e.target.parentNode
+        removePic.remove() //First Method (Simple)
+        // removePic.parentNode.removeChild(removePic)
+      }
+    }, false)
+
+
+
+</script>
+
+</html>
