@@ -10,24 +10,29 @@
 <body>
 
   <h1>Async Javascript</h1>
+  <button id="start"> Start </button>
   <button id="stop"> Stop </button>
 
 </body>
 
 <script>
 
-  // setTimeout(), setInterval()  it is web api
-  const logMe = setTimeout(() => {   // Run Only Once After 2 Second
-    console.log("Async");
-  }, 2000)
+  // setInterval()  it is web api
+  const logMe = (str) => {
+    console.log(str, Date.now());
+  }
 
-  // ClearTimeout() / Mainly use in Event
-  // clearTimeout(logMe) // It Need setTimeout refernce to stop / clear the execuation
+  // Store setInterval Refernce
+  let intervalId
+
+  document.querySelector("#start").addEventListener("click", () => {
+    intervalId = setInterval(logMe, 1000, "Async Javascript")
+  })
 
   document.querySelector("#stop").addEventListener("click", () => {
-    clearTimeout(logMe)
-    console.log("Stooped");
+    clearInterval(intervalId)
   })
+
 
 </script>
 
