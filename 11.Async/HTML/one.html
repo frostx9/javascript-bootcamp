@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <h1>Async Javascript</h1>
+  <button id="stop"> Stop </button>
+
+</body>
+
+<script>
+
+  // setTimeout(), setInterval()  it is web api
+  const logMe = setTimeout(() => {   // Run Only Once After 2 Second
+    console.log("Async");
+  }, 2000)
+
+  // Different Technique Or Using setTimeout/ setInteval
+  const setInteval = () => {
+    console.log("Javascript")
+  }
+
+  // Run Repeted 2 Second interval
+  setInterval(setInteval, 2000)
+
+  // ClearTimeout() / Mainly use in Event
+  // clearTimeout(logMe) // It Need setTimeout refernce to stop / clear the execuation
+
+  document.querySelector("#stop").addEventListener("click", () => {
+    clearTimeout(logMe)
+    console.log("Stooped");
+  })
+
+</script>
+
+</html>
