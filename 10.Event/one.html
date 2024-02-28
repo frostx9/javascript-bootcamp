@@ -48,7 +48,7 @@
   Mostly Project use is Event Bubbling (Default Value) which is false
   */
 
-  // First Example -  1. Event Bubbling
+  // // First Example -  1. Event Bubbling
   document.getElementById("images").addEventListener("click", function (e) {
     console.log("Clicked In Ul");
   }, false)
@@ -60,10 +60,14 @@
   // /*
   // In this Example if we click any pciture except owl, it will prcint Clicked In Ul. But if we click in Owl picture. It will first print Clicked In Owl
   // than Clicked In Ul. This Concept is called event bubbling. Small to Big. First Li Part Print the Ul Part Print.
+
+  // Clicked In Owl
+  // Clicked In Ul
+
   // */
 
 
-  // Second Example -  2. Event Captureing
+  // // Second Example -  2. Event Captureing
   document.getElementById("images").addEventListener("click", function (e) {
     console.log("Clicked In Ul");
   }, true)
@@ -72,13 +76,17 @@
     console.log("Clicked In Owl");
   }, true)
 
-  /*
-  In this Example if we click any pciture except owl, it will prcint Clicked In Ul. But if we click in Owl picture. This Time it will print first Clicked In Ul
-  than Clicked In Owl. Step By Step
-  */
+  // /*
+  // In this Example if we click any pciture except owl, it will prcint Clicked In Ul. But if we click in Owl picture. This Time it will print first Clicked In Ul
+  // than Clicked In Owl. Step By Step
+
+  // Clicked In Owl
+  // Clicked In Ul
+
+  // */
 
 
-  // Another Metohd Of Stop Bubbling - stopPropagation()
+  // // Another Metohd Of Stop Bubbling - stopPropagation()
   document.getElementById("images").addEventListener("click", function (e) {
     console.log("Clicked In Ul");
   }, false)
