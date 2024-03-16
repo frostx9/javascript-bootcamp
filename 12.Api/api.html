@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body style="background-color: #212121;">
+
+  0 UNSENT Client has been created. open() not called yet.
+  1 OPENED open() has been called.
+  2 HEADERS_RECEIVED send() has been called, and headers and status are available.
+  3 LOADING Downloading; responseText holds partial data.
+  4 DONE The operation is complete
+
+</body>
+
+<script>
+  // Ajax
+
+  const requestUrl = "https://randomuser.me/api";
+
+  const xhr = new XMLHttpRequest();
+  xhr.open('GET', requestUrl); // Create GET Method
+
+  xhr.onreadystatechange = function () {
+    // To Track The State of Api Call
+    console.log(xhr.readyState)
+    if (xhr.readyState === 4) {
+      const data = JSON.parse(this.responseText) // To Convert String To Object
+      console.log(data);
+    }
+  }
+
+  xhr.send(); // Call The Get Method
+
+  /*
+  Console is not a part of Javascript. Its a part of V8 Engine which is written in C++
+  Go to The V8 Engine Git Repo
+
+  File Structure = > v8/src/d8
+  
+  all Console Method Written in d8.console.cc
+
+  console.log() Code in c++
+
+  void D8Console::Log(const debug::ConsoleCallArguments& args,
+  const v8::debug::ConsoleContext&) {
+  WriteToFile(nullptr, stdout, isolate_, args);
+  }
+
+
+  */
+
+</script>
+
+</html>

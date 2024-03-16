@@ -94,3 +94,11 @@ const obj5 = {
 const { fullName: name } = obj5  // We Can give also name of the property
 
 console.log(name) // Apex Legend
+
+// To Check Object is Empty or Not
+
+const emptObj = {}
+
+if (Object.keys(emptObj).length === 0) {
+  console.log("Empty Object");
+}
