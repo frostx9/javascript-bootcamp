@@ -9,7 +9,7 @@ Because api called sucessfully, but no data found
 
 
 fetch() api its a special type of task Queue. Its Priority Most High. If There is setTimeOut() fucntion called before 
-fetch() call the fetch() call execute first 
+fetch() call, the fetch() call execute first 
 
 when fetch() keyword use.. It will work in two part
 
