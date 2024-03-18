@@ -1,6 +1,8 @@
 # Javascript And Classes
 
-# Javscript is Proto Type Based Language. Not Functional Not Object Oriented
+# Javscript is Proto Type Based Language. Not Functional Not Object Oriented. Prototypal Inheritance 
+# End Of Day everything in javascript is an object. So which properties available in object will be available in array or string.
+## It will try to access everything from buttom to top unless null was found
 
 ## Object
 - Collection of Properties And Method (toLowerCase() ...)
