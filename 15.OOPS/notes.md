@@ -1,14 +1,20 @@
 # Javascript And Classes
 
+
 # Javscript is Proto Type Based Language. Not Functional Not Object Oriented. Prototypal Inheritance 
-# End Of Day everything in javascript is an object. So which properties available in object will be available in array or string.
+# End Of Day everything in javascript is an object. So each properties available in object will be available in array or string.
 ## It will try to access everything from buttom to top unless null was found
+
+# Actuall Class (OOPS concept) is not present in Javascript. In Javascript Classes are syntatic sugar of prototype-based inheritance mechanisam
+## It also help the programer who coming from class-based lanhauge
 
 ## Object
 - Collection of Properties And Method (toLowerCase() ...)
 
+## OOP . It just a programing paradime
+
 # Parts Of OOP
-- Construtor Function
+- Constructor Function
 - Prototype / Proto
 - Classes
 - Instances (new, this)

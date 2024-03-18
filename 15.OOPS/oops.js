@@ -7,6 +7,7 @@ const user = {
   }
 }
 
+// Constructor Function => new keyword
 function User(username, isLoggedin) {
   this.username = username
   this.isLoggedin = isLoggedin
