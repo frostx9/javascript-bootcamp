@@ -18,7 +18,7 @@ rejected: meaning that the operation failed.
 // Type 1
 const promiseOne = new Promise(function (resolve, reject) {
   setTimeout(function () {
-    console.log("Async Task Is Complete");
+    console.log("Async Task Is Complete 1");
     resolve()  // To Connect with resolve and then
   }, 1000)
 
@@ -26,18 +26,18 @@ const promiseOne = new Promise(function (resolve, reject) {
 
 // .then() => Resolve
 promiseOne.then(() => {
-  console.log("Promise is Consumed");
+  console.log("Promise is Consumed 1");
 })
 
 
 // Type 2
 new Promise(function (resolve, reject) {
   setTimeout(function () {
-    console.log("Async Task Is Complete ");
+    console.log("Async Task Is Complete 2");
     resolve()
   }, 2000)
 }).then(() => {
-  console.log("Promise is Consumed");
+  console.log("Promise is Consumed 2");
 })
 
 // Type 3
@@ -74,29 +74,6 @@ promiseFour.then((user) => {
   console.log(error);
 }).finally(() => console.log("The Promise Is Either Resolve Or Reject"))
 
-
-// Type 5
-const promiseFive = new Promise(function (resolve, reject) {
-  setTimeout(function () {
-    let error = true
-    if (!error) {
-      resolve({ name: "Kiran Debnath", designation: "SDE3" })
-    } else {
-      reject("Error: Something Went Wrong 2")
-    }
-  }, 5000)
-})
-// Async Await cant handle Error Directly. It Need Try Cath Block to Gracefully 
-async function consumePromiseFive() {
-  try {
-    const Response = await promiseFive
-    console.log(Response);
-  } catch (error) {
-    console.log(error);
-  }
-}
-
-consumePromiseFive()
 
 // Promise With Fetch
 fetch('https://randomuser.me/api')
