@@ -34,7 +34,6 @@ api.createOrder(cart, function(){
 })
 
 
-
 After Suppose We want to update the wallet. Then We Create A Api and pass the api as a callback into the  api.showSummary() api
 
 api.createOrder(cart, function(){
@@ -51,13 +50,23 @@ api.createOrder(cart, function(){
 
 })
 
-in this code there is a problem. we call api into another as a call back. Because all api dependices each other.
-It Makes Call back Hell. Also Known As Pyramid Of Doom
+## In this code there is a problem. We call an api into another api as a call back. Because all api dependices each other.It Makes **Call back Hell**. Also Known As **Pyramid Of Doom**
 
-# Inversion Of Control
+
+## Inversion Of Control
 Lose the control of your code while using Call back. Becaus we give a control of a function into another function and we dont know what will be happening inside
 
-# Promises
+api.createOrder(cart, function(){
+
+  api.procedePayment()
+
+})
+
+In this call back scenario we blindly trusted to api.createOrder(), that some point after ctreate order it call back the api.procedePayment()
+It is very risky. Because we give control of api.procedePayment() function to api.createOrder(). Thats how we loose the control of the code
+
+
+## Promises
 
 is an object representing the eventual compleitance or failure of async operations
 
