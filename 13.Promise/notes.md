@@ -1,8 +1,8 @@
-# Callback Hell
+# *Callback Hell*
 
 Javascript is synchronous single threaded language. Do one thing at a time.  Execute Code Line By Line
 
-## Call Back Function
+# *Call Back Function*
 
 Simple Word - Call A function Later to execute. Make Asychronus Javascript
 
@@ -53,7 +53,7 @@ api.createOrder(cart, function(){
 ## In this code there is a problem. We call an api into another api as a call back. Because all api dependices each other.It Makes **Call back Hell**. Also Known As **Pyramid Of Doom**
 
 
-## Inversion Of Control
+# *Inversion Of Control*
 Lose the control of your code while using Call back. Becaus we give a control of a function into another function and we dont know what will be happening inside
 
 api.createOrder(cart, function(){
@@ -66,25 +66,20 @@ In this call back scenario we blindly trusted to api.createOrder(), that some po
 It is very risky. Because we give control of api.procedePayment() function to api.createOrder(). Thats how we loose the control of the code
 
 
-## Promises
+# *Promises*
 
 is an object representing the eventual compleitance or failure of async operations
 
 ## Promise Channing
 
-createOrder(cart)
-  .then((orderId)=>{
-    return orderId
-  })
-  .then((orderId)=>{
-    return procedePayment(orderId)
-  })
-  .then(()=>{
-    return showSummary()
-  })
-  .then(()=>{
-    return updateWallet()
-  })
+createOrder(cart) // Take Cart Array.  Return Order Id
+
+procedePayment(orderId) // Take Order Id To Procede Payment Page. Return Payment Id
+
+showSummary(paymentId) // Take Payemnt Id to Prcede Summary Page
+
+
+This all api are async. Depent each other. We cant go procedePayment() api directly unless createOrder() api dont give order ID
 
 
 ## Example
