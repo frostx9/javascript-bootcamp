@@ -66,11 +66,10 @@ In this call back scenario we blindly trusted to api.createOrder(), that some po
 It is very risky. Because we give control of api.procedePayment() function to api.createOrder(). Thats how we loose the control of the code
 
 
-# *Promises*
+# *Promises* - **It is an object representing the eventual complete or failure of async operations**
 
-is an object representing the eventual compleitance or failure of async operations
 
-## Promise Channing
+## Promise
 
 createOrder(cart) // Take Cart Array.  Return Order Id
 
@@ -80,6 +79,20 @@ showSummary(paymentId) // Take Payemnt Id to Prcede Summary Page
 
 
 This all api are async. Depent each other. We cant go procedePayment() api directly unless createOrder() api dont give order ID
+
+
+const promiseData = createOrder(cart)
+
+Intially promiseData have emtpy promise object. Because JS excute line by line and w8 for none. {data: undefined}.After some time / async operation when createOrder() function
+retrun data, then promiseData have promise object data. {data: orderID}
+
+**In Call Back we *pass* a function as a call back into another function, but in promise...then...catch, we *attaching* a call back function to a promise object**
+
+**when promsise have filled data, it will automatically called call back function with help of *then* keyword**
+
+**then only work when promise have filled object**
+
+*Promise return as a readable stream and immutable data*
 
 
 ## Example

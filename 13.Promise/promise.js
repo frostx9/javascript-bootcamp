@@ -3,8 +3,8 @@
 /*
 A Promise is in one of these states:
 
-pending: initial state, neither fulfilled nor rejected.
-fulfilled: meaning that the operation was completed successfully.
+pending: initial state, neither fulfilled nor rejected. Working Stage
+fulfilled: meaning that the operation was completed successfully. Return the desire data
 rejected: meaning that the operation failed.
 
 */
