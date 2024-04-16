@@ -94,6 +94,19 @@ retrun data, then promiseData have promise object data. {data: orderID}
 
 *Promise return as a readable stream and immutable data*
 
+## Promise Chaining
+
+createOrder(cart)
+.then(function(orderID){
+ return procedePayment(orderID)
+})
+.then(function(paymentInfo)){
+  return showSummary(paymentInfo)
+}
+
+
+
+
 
 ## Example
 
