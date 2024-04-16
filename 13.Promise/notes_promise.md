@@ -105,11 +105,9 @@ createOrder(cart)
 }
 
 
-
-
-
 ## Example Of Promise with Return
 
+# Create Function For Create Order
 function createOrder(cart) {
   
   const promiseData = new Promise(function (resolve, reject){  // Creating Promise
@@ -133,11 +131,28 @@ function createOrder(cart) {
   return promiseData  // Return Promise
 }
 
+
+
+# Create Function For Procede paymnet
+
+function procedePayment(orderId){
+  return new Promise(function (resolve, reject){
+
+    resolve("Payment Successfull")
+
+  })
+}
+
+
 // Calling The createOrder function / api
 const promise = createOrder(cart)
 
 promise.then((id)=>{
   consolr.log(id)  // 12345
+  return id   // Return Response
+})
+.then((id)=>{
+  return procedePayment(id) // Return Promise
 })
 .catch((err)=>{
   console.log(err.message)
