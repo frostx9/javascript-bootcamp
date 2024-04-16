@@ -108,30 +108,37 @@ createOrder(cart)
 
 
 
-## Example
+## Example Of Promise with Return
 
-function createOrder(cart){
+function createOrder(cart) {
+  
+  const promiseData = new Promise(function (resolve, reject){  // Creating Promise
 
-  const pr = new Promise((resolve, reject)=>{
-      
-      // Db Call
 
-      if(orderId){
-        resolve(orderID)
-      }else{
-        reject("Someting Went Wrong")
-      }
+    // Validated Card
+    if(!validatedCart(cart)) {
+      reject(new Error("Cart is Not Valid"))
+    }
+
+    // Create Order Business Logics
+    const oderID = await Order.create().exec()  // Example
+
+    const orderID = 123456
+
+    if(orderID){
+      resolve(orderID)
+    }
   })
 
-  retutn pr
+  return promiseData  // Return Promise
 }
 
-function procedePayment(orderId){
+// Calling The createOrder function / api
+const promise = createOrder(cart)
 
-  return new Promise((resolve, reject)={
-
-    resolve("Payment Sucessful")
-
-  })
-
-}
+promise.then((id)=>{
+  consolr.log(id)  // 12345
+})
+.catch((err)=>{
+  console.log(err.message)
+})
