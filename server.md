@@ -11,23 +11,7 @@ agenda/       emails/       lib/          node_modules/ routes/       views/
 bin/          .git/         models/       public/       tests/        
 ubuntu@ip-172-31-30-149:~$ cd stronger-vet/strongerveteranservice/
 ubuntu@ip-172-31-30-149:~/stronger-vet/strongerveteranservice$ cat .env
-SECRET=lOGICSQUARE
-MONGODB_CONNECTION_STRING="mongodb://localhost:27017/veterans"
-API_VERSION=1
-AWS_ACCESS_KEY="AKIAUDWJFKQ6WZDRBBLL"
-AWS_SECRET="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"
-AWS_BUCKET_NAME="grouped-dev"
-AWS_BUCKET_REGION="us-east-1"
-PORT="3000"
-SMTP_SECURE="yes"
-SMTP_HOST="smtp.mailgun.org"
-SMTP_PORT="465"
-SMTP_FROM_ADDRESS="no-reply@mg.smoothire.com"
-SMTP_AUTH_USER="no-reply@mg.smoothire.com"
-SMTP_AUTH_PASSWORD="f057dc1f131bc3c173e648a2c9eedcc8-4534758e-cd3ec81c"
-SITE_URL="https://api-sv.logic-square.com"
-ADMIN_LOGIN_URL="http://strongerveterans-adminapp.surge.sh/login"
-USER_LOGIN_URL="https://veterancommunityresources-userapp.surge.sh/home"
+
 ubuntu@ip-172-31-30-149:~/stronger-vet/strongerveteranservice$ cd
 ubuntu@ip-172-31-30-149:~$ cd /etc/nginx/sites-available/
 ubuntu@ip-172-31-30-149:/etc/nginx/sites-available$ ls
