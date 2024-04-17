@@ -112,3 +112,19 @@ so it will print immedate
 
 
 */
+
+
+// Fetch with Asyn Await
+const API_URL = "https://randomuser.me/api/"
+
+async function demoUser() {
+
+  const data = await fetch(API_URL)   // Return Promise / Reponse Obejct
+
+  const jsonValue = await data.json() // To Convert Response Body into JSON and store data
+
+  console.log(jsonValue);
+
+}
+
+demoUser()

@@ -41,3 +41,12 @@ const p = new Promise((resolve, reject)=>{
 async function handlePromise(){
   const val =  await p     // Await Key Word use always infront of the promise and stored into a varaiable and work only inside in the async function
 }
+
+
+## How Fetch Work
+
+fetch() => Returns A Promise. After Promise Fullfiled it will give response object, which is readable stream
+
+*To Convert Readable Stram in json format we use **.json()** Method*
+
+Again .json() retrun a pronise object. When promise resolved it finally give the result / json value
