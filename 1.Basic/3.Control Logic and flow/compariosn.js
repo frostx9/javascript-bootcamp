@@ -15,3 +15,5 @@
 6 === "6"; // False...Because triple equal chek value and type
 
 password.indexOf(" ") === -1; // It means that password dont have any space
+
+"2" > 1 // True. Because In Comprasion Check Javascript Convert String to Number then check. Its Not Recomended
