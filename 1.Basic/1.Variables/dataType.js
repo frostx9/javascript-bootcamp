@@ -5,13 +5,13 @@
 Data Type Divide by how data store in memory and how we access
 
 Data Type => Primitive (Call By Value)
-1. String -
+1. String
 2. Number
 3. BigInt
 4. Boolean
 5. Undefined
 6. Symbol -> Mianly Use In react component to make uniqeness
-7. Null
+7. Null (Standalnet Value)
 
 Data Type => Non Primitvie (Refernce Type. Directly Memory Allocate)
 1. Array

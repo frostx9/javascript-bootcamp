@@ -26,3 +26,24 @@ console.log(Boolean(emptyString)) // False. This have No Value. But If it has sp
 
 const notEmptyString = "Hello"
 console.log(Boolean(notEmptyString)) // True. This Have Value
+
+// Conversion
+
+console.log("1" + 2); // 12
+console.log(1 + "2"); // 12
+console.log("1" + 2 + 2) // 122
+console.log(1 + 2 + "2") // 32
+
+/**
+ * Because its follow the Ecamascript Guide from Rule ToPrimitive(input, [preferredType])
+ *
+ * ToPrimitive - Convert To Prefered Type. If there is String First. It Convert Everything To String
+ * if Number First. First it all number will be evaluate then it attach to String
+ *
+ * ex : 1 + 2 + "2"
+ *
+ * Fist 1 + 2 = 3
+ * Second 3 + "2" = 32
+ */
+
+// Prefix & Postfix 
