@@ -3,7 +3,7 @@ let example1 = new Number(-10.250) // This will Asure it wil be Number
 let example2 = new Number(100000000)
 
 // To Fixed Precession value
-console.log(example1.toFixed(1));
+console.log(example1.toFixed(2)); // Ans = -10.25
 
 // To make any number to round
 console.log(Math.round(example)); // Ans = 11.
@@ -15,7 +15,7 @@ console.log(Math.abs(example1)); // Ans = 10.25
 console.log("Floor", Math.floor(example)); // Ans =10
 
 //  Take Higher Number
-console.log("Ceil", Math.ceil(example)); // Ans =10
+console.log("Ceil", Math.ceil(example)); // Ans =11
 
 // Power any numer
 console.log(Math.pow(2, 2)); // Ans = 4
@@ -39,4 +39,4 @@ parseInt(); // String to Number
 parseFloat(); // String to Float Number
 
 // To Format The Long Value
-console.log(example2.toLocaleString("en-IN"));
+console.log(example2.toLocaleString("en-IN")); // 10,00,00,000 . To Indian Number System
