@@ -3,11 +3,12 @@
 // All keys are converted to string
 // {...}  - this is object litterals
 
-// Creating Object - Object Litteral
+// Creating Object - Object Litteral (Not Singleton)
 
 const fitbitData = {
   totalSteps: 8456,
   totalMiles: 7.8,
+  [mySymbol]: "myKey1"
 };
 
 const number = {
@@ -18,9 +19,9 @@ const number = {
 console.log(fitbitData);
 
 // Acess Data
-
 console.log(fitbitData.totalSteps);
 console.log(number[100]);
+
 
 // Update Property
 fitbitData.totalSteps = 9586;
@@ -47,17 +48,17 @@ name : "Saumya"
 
 // Object Freeze
 
-Object.freeze() //This change any object muteable to im-muteable 
+Object.freeze(person) //This change any object muteable to im-muteable . Person Object is now im-muteable now
 
 // Object With Symbol
 
 const mySym = Symbol("key1")
 
 const symObj = {
-  [mySym]: "myKey1"
+  [mySym]: "myKey1" // To Add Symbol in Object
 }
 
-console.log(symObj[mySym]);
+console.log(symObj[mySym]); // Access Symbol
 
 
 // Object Create - singleton
@@ -78,15 +79,16 @@ const obj3 = Object.assign({}, obj1, obj2) // Ans = { '1': 'a', '2': 'b', '3': '
 // Anothe Way  With Spread Operator
 const obj4 = { ...obj1, ...obj2 }
 
-console.log(Object.keys(obj1));
-console.log(Object.values(obj1));
+console.log(Object.keys(obj1));  // Retrun Array of All keys present in Object
+console.log(Object.values(obj1)); // Retrun Array of All values present in Object
 console.log(Object.entries(obj1));
 
-console.log(obj1.hasOwnProperty("1")) // true
+console.log(obj1.hasOwnProperty("1")) // true. Check Property of Object (Key name)
 console.log(obj1.hasOwnProperty("4")) // false
 
-// Object Destructure
 
+
+// Object Destructure
 const obj5 = {
   fullName: "Apex Legend"
 }

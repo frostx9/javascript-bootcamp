@@ -17,3 +17,7 @@ consoel.log(person) -> Ans. [name : "White"]
 in here array person convert to object
 
 ** Array is a kind of object but not fundamentally
+
+Shallow Copy - Share The memory reference
+
+Deep Copy - Did Not Share The memory reference
