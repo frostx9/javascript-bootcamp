@@ -37,6 +37,7 @@ switch (day) {   // String
 
 // Ternary Operator
 ("? :"); // ?..mean is if .... and  : mean is else
+// Condtion ? true : false
 
 const num = 2;
 num === 7 ? console.log("Lucky") : console.log("Bad");
@@ -57,7 +58,7 @@ if (value) {  // We Asume value is truthy /  Have Value
 /**
  * Falsey Value = 0, -0, "", null, undefined, null, BigInt 0n
  * 
- * Truthy Value = [], {}, functio() / Empty Fucntion, 
+ * Truthy Value = [], {}, function() / Empty Fucntion, 
  */
 
 // Empty Object Check
@@ -66,3 +67,8 @@ const emptyObj = {}
 if (Object.keys(emptyObj).length === 0) {
   console.log("Empty Object");
 }
+
+// Nullish Coalescing Operator (??) -> Work only on null or undefined
+let val1
+val1 = null ?? 10  // If Data is will null and val will be print 10.
+// It wrok as a default value

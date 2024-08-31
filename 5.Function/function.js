@@ -30,7 +30,7 @@ console.log(isPurpale("Black"))
   // IIFE = Immediately Invoked Function Expression
   /**
    *  To Prevent Global Scope Varaiable Polution
-   * ; -> To End IFFE function
+   * ; -> To End IFFE function. To End Context
    */
   (function iffEfunc() {  // Named IFFE Function
     console.log("Hello World");
@@ -39,8 +39,6 @@ console.log(isPurpale("Black"))
 ((name) => {  // IFFE Function
   console.log(`Hello ${name}`);
 })('FROST');
-
-
 
 
 
