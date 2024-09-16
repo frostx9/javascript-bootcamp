@@ -33,3 +33,27 @@ for (i = 0; i < gameBoard.length; i++) {
     console.log(row[j]);
   }
 }
+
+
+// Break In For Loop
+
+for (i = 0; i < 10; i++) {
+
+  if (i === 5) {
+    console.log("Detected 5");
+    break    // Stop the loop after 5. Break The Control Flow
+  }
+  console.log(`Valur of i is ${i}`);
+}
+
+
+// Continue In For Loop
+
+for (i = 0; i < 10; i++) {
+
+  if (i === 5) {
+    console.log("Detected 5");
+    continue    // Skip The Cndtion When i = 5. Continue The Loop
+  }
+  console.log(`Valur of i is ${i}`);
+}
