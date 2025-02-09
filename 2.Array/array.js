@@ -68,6 +68,23 @@ let score1 = 100
 let score2 = 200
 let score3 = 300
 
-console.log(Array.of(score1, score2, score3));
+console.log(Array.of(score1, score2, score3)); // Ans : [ 100, 200, 300 ]
 
-Array.from() // It will convert to array
+
+// Soft Copy vs Hard Copy
+
+/**
+ * In Soft Copy, it just make a reference of the array. if any Change in  calenderEvent array , it will also affect shallowCopy array
+ */
+
+const calenderEvent = ["Work", "Play", "Sleep", "Repeat"]
+const shallowCopy = calenderEvent
+console.log(shallowCopy); // Ans : ["Work", "Play", "Sleep", "Repeat"]
+
+/**
+ * In Hard Copy, it just make a copy of the array. if any Change in  calenderEvent array , it will not affect shallowCopy array
+ */
+
+const calenderEvent1 = ["Work", "Play", "Sleep", "Repeat"]
+const structuredCopy = [...calenderEvent1]
+console.log(shallowCopy); // Ans : ["Work", "Play", "Sleep", "Repeat"]
