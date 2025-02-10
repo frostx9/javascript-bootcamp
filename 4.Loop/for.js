@@ -57,3 +57,5 @@ for (i = 0; i < 10; i++) {
   }
   console.log(`Valur of i is ${i}`);
 }
+
+// Break & Continue Not Working in ForEach loop. We use return keyword in forEach

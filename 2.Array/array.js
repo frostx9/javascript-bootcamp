@@ -29,6 +29,9 @@ console.log(Number); // Add first element from the array.Ans will be [ 9, 3, 4, 
 
 console.log(Number.concat(Number1)); // Add Toghter in Array...Ans will be  [1,9,3,4,5,6,10,10,11,12,13,14,15]
 
+// Another Method For Concat Using Spread Operator
+console.log([...Number, ...Number1])
+
 console.log(Number.includes(1)); // includes return boolean ... True or false
 
 console.log(Number.indexOf(3)); // Return index value of any element of array..Ans will be 2
@@ -39,22 +42,17 @@ console.log(Number.reverse()); // Reverse array
 
 console.log(Number.join("-")); // Join Array make into a string
 
-console.log(Number);
+// Slice
 const new1 = Number.slice(0, 2); // Return new array.. Slice also use to create copy of array.. 0 is included and 2 is excluded
-console.log(new1);
 
-console.log(Number);
-const new2 = Number.splice(1, 1); // Splice basically return empty array...but if u delete something , delete item retuen new array
+// Splice
 // first argument is starting index number, 2nd arguemnt is How many want item delete after starting index number
+const new2 = Number.splice(1, 1); // Splice basically return empty array...but if u delete something , delete item retuen new array
+
 const new3 = Number.splice(5, 0, 16)
 // Here it says that start from index 5 , delete nothing , add 16 after index 5 item .... [10, 11, 12, 13, 14, 15, 16]
-console.log(Number);
-console.log(new2);
 
-// Slice Dont manuplualte Original Array, but Splide Manipualte Orignal Array
-
-// Another Method For Concat Using Spread Operator
-console.log([...Number, ...Number1])
+// ** Slice Dont manuplualte Original Array, but Splide Manipualte Orignal Array
 
 // Array Flat
 const anotherArray = [1, 2, [3, 4, [5, 6]], 7]

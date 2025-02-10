@@ -9,18 +9,17 @@ const movie = {
   Coraline: 7.5,
 }
 
+// Get Only Keys
 for (let name of Object.keys(movie)) {
-  // Object.keys()
   console.log(name)
 }
 
+// Get Only Values
 for (let name of Object.values(movie)) {
-  // Object.values()
   console.log(name)
 }
 
-console.log(movie["Arrival"])
-
+// For..in loop .. greet is the key of the object
 for (let great in movie) {
   console.log(`${great} : ${movie[great]}`)
 }
