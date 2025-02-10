@@ -49,18 +49,6 @@ const math = {
 console.log(math.Addition(10, 2))
 console.log(math.Subtraction(10, 2))
 
-// Higher Order Function = Its mean Accept other fuction as an argument or return as a function
-//Accept other fuction as an argument
-function call(calll) {
-  calll() // call the luagh() function twice... in here call() meaning calling laugh() function
-  calll()
-}
-
-function laugh() {
-  console.log("Haha...You are Funny");
-}
-
-call(laugh)
 
 //Return as a function
 function multi(num) {
@@ -70,10 +58,10 @@ function multi(num) {
 }
 
 const triple = multi(5) // This call meaning const triple =  function (x) { return 5 * x} 
-console.log(triple(2)); // This call meaning function (x) { return 5 * 2}
+console.log(triple(2)); // This call meaning function multi (2) { return 5 * 2}
+
 
 // Example :-
-
 function makeBetween(a, b) {
   return function (age) {
     if (age > a && age < b) return true

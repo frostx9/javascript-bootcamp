@@ -1,5 +1,4 @@
 // Password Validator
-
 function isValidPassword(password, username) {
   if (password.length < 8) return false
   else if (password.indexOf(" ") !== -1) return false
@@ -11,7 +10,6 @@ const answer = isValidPassword("abcdefghi", "dogLover")
 console.log(answer)
 
 // Average
-
 function average(arr) {
   let total = 0
   for (let number of arr) total += number

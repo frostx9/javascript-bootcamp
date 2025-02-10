@@ -68,3 +68,5 @@ const animal = {
 }
 
 console.log(animal.start());
+
+// This Keyword has ability to work in arrow function , but dont have any ability to pass on this context anywere else

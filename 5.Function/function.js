@@ -71,3 +71,26 @@ calculate(100, 200, 300) // Ans [100, 200, 300]
 // Arrow Function - Implicit Retrun Object
 const arrowFunc = () => { { username: "Hello" } }
 console.log(arrowFunc);
+
+
+
+// High Order Fucntion / First Class Fucntion
+/**
+ * When A function is passed as an argument to another function. Its Called High Order Fucntion
+ * Example : ForEach loop Is a type of High Order Fucntion
+ * 
+ * forEach(()=>{
+ * })
+ */
+
+//Accept other fuction as an argument
+function call(calll) {
+  calll() // call the luagh() function twice... in here call() meaning calling laugh() function
+  calll()
+}
+
+function laugh() {
+  console.log("Haha...You are Funny");
+}
+
+call(laugh)
