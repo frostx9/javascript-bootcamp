@@ -52,7 +52,8 @@ document.getElementById("image") // ..in here image is the id..  <img id="image"
 
 //getElemntByTagName
 // It seelct all tag ..like h1, img , p 
-document.getElementsByTagName("img") // in here img is the tag .. <img id="image"..../>
+document.getElementsByTagName("img") // in here img is the tag .. <img id="image"..../> It Will Also Return All Image tags that present in the page
+
 
 /**
  * HTMLCollection - It is a array like Object

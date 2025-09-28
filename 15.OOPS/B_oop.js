@@ -48,6 +48,7 @@ console.log(multi.prototype) // {}
 // Evrything in javascript is an object. Function is a function. Fucntion is also object
 
 
+// Declaring Constructor Function
 function createUser(username, score) {
   this.username = username
   this.score = score
@@ -84,7 +85,7 @@ a non-primitive value (object, array, function, etc.), the newly created object 
 
 */
 
-// Protoype
+//--------------------- Protoype
 // Object Prototype
 let heroPower = {
   thor: "Hammer"
@@ -121,7 +122,10 @@ name.trueLength() // 3
 "DEFF     ".trueLength() // 4
 
 
-// Inheritance
+
+
+
+//---------------------------- Inheritance
 const user = {
   name: "ABC"
 }
