@@ -320,8 +320,49 @@ So We try to access the ***getName()*** before intialize it. Also we try to prin
 Hello World
 undefined
 ```
-This is called ***Hoisting***. 
+This is called <ins>***Hoisting***</ins>. 
 
 <br>
 
-Now Discussing how why the programing behave like this. It act upon the **Execution Context Concept**
+Now Discussing how why the programing behave like this. It act upon the <ins>**Execution Context Concept**</ins>. So when js run the code, JS engine create Global Execution Context with two component. 
+
+1. Memory Component
+2. Code Component
+
+In memotry component, it will store all the variable and function first, then go the code component.
+
+```js
+Global Execution Context
+
+| Memory Component         | Code Component |
+|--------------------------|----------------|
+| getName : {...}          |                | 
+|--------------------------|----------------|
+| x : undefined            |                | 
+|--------------------------|----------------|
+```
+
+After that, when js go the code component, it will execute the code line by line. First Function is Invoking / Calling. So A New Function Execution Context is created and print the log
+
+Next when go the next line , it will print the value of ***x***. But ***x*** has no value till now. So it will print undefined. Becuase After that x is assigned with value 7.
+
+
+## Not Defined vs Undefined
+```js
+console.log(x)
+
+var getName = () => {         // Anonymous Function
+  console.log("Hello World")
+}
+```
+When We Try to Run The Code , An Error will be thrown; <ins> ***ReferenceError : x is not defined***</ins>. Because there is no memory allocation for x in Global Execution Context memory block. This is called <ins>***Not Defined***</ins>.
+
+When We Try to the arrow Function, An Error will be thrown; <ins> ***TypeError: getName is not a function***</ins>.
+```js
+getName()
+
+var getName = () => {         // Anonymous Function
+  console.log("Hello World")
+}
+```
+In Arrow Function **getName** does not behave like fucntion, it will behave like variable. So when run the code in Execution Context memory block, a variable will declare *getName* with *undefined* value. We cant invoke a variable. Thats why **getName is not a function** error come
